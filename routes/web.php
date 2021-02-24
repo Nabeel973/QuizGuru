@@ -5,7 +5,7 @@ Route::get('/', function () {
 })->name('front');
 
 Route::group([
-    'namespace' => 'User\\Auth',
+    'namespace' => 'Auth',
 ], function () {
 
     // Authentication Routes...
@@ -26,4 +26,4 @@ Route::group([
 
 });
 
-Route::get('home', 'User\\UserController@index')->name('home');
+Route::get('home', 'UserController@index')->name('home');
