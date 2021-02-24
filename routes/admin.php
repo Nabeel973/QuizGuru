@@ -20,5 +20,22 @@ Route::group([
     Route::get('home', 'AdminController@index')->name('dashboard');
     Route::get('dashboard', 'AdminController@index')->name('dashboard');
 
+    // for administrator
+    Route::group(['middleware' => ['role:administrator']], function () {
+        //
+    });
+
+    // for moderators
+    Route::group(['middleware' => ['role:administrator|moderator']], function () {
+        // users
+        Route::group(['prefix' => 'users', 'as' => 'users.',], function () {
+            Route::get('all', 'AdminUserController@index')->name('index');
+        });
+    });
+
+    // for managers
+    Route::group(['middleware' => ['role:administrator|moderator|manager']], function () {
+        //
+    });
 
 });
