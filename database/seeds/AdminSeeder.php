@@ -17,22 +17,28 @@ class AdminSeeder extends Seeder
 
         $admins = [
             [
-                'role' => 'administrator',
-                'name' => 'Admin',
-                'email' => 'administrator@gmail.com',
+                'role_id' => '1',
+                'name' => 'Muhammad Nabeel Siddiqui',
+                'email' => 'nabeel.siddiqui@gmail.com',
                 'password' => 'secret',
+                'phone' => '03361203778',
+                'status' => '1',
             ],
             [
-                'role' => 'moderator',
-                'name' => 'Moderator',
-                'email' => 'moderator@gmail.com',
+                'role_id' => '2',
+                'name' => 'Atif Khan',
+                'email' => 'atif.khan@gmail.com',
                 'password' => 'secret',
+                'phone' => '03361203778',
+                'status' => '1',
             ],
             [
-                'role' => 'manager',
-                'name' => 'Manager',
-                'email' => 'manager@gmail.com',
+                'role_id' => '3',
+                'name' => 'Muzzaffar Khan',
+                'email' => 'muzzaffar.khan@gmail.com',
                 'password' => 'secret',
+                'phone' => '03361203778',
+                'status' => '1',
             ],
         ];
 
@@ -42,9 +48,12 @@ class AdminSeeder extends Seeder
                 $super_admin = Admin::firstOrCreate([
                     'name' => $admin['name'],
                     'email' => $admin['email'],
+                    'phone' => $admin['phone'],
+                    'role_id' => $admin['role_id'],
                     'password' => bcrypt($admin['password']),
+                    'status' => $admin['status'],
                 ]);
-                $super_admin->assignRole($admin['role']);
+                $super_admin->assignRole($admin['role_id']);
             }
         }
     }

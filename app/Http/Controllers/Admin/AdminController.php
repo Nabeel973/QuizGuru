@@ -17,6 +17,6 @@ class AdminController extends Controller
     public function index()
     {
 
-        return view('admin.pages.dashboard'); //ss
+        return view('admin.pages.dashboard');
     }
 }
