@@ -32,3 +32,6 @@ table#datatable1 td p{
 a:not([href]):not([tabindex]){
     color:white;
 }
+.login-box .login-box-body{
+    background: transparent !important;
+}

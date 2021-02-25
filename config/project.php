@@ -9,7 +9,7 @@ return [
     'admin' => [
         'prefix' => env('ADMIN_PREFIX', 'admin'),
         'roles' => [
-            'Super Admin' => 'Super Administrator',
+            'SA' => 'SA',
             'Admin' => 'Admin',
             'Moderator' => 'Moderator',
         ],

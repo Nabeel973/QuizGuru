@@ -23,8 +23,10 @@ class AdminSeeder extends Seeder
                 'password' => 'secret',
                 'phone' => '03361203778',
                 'status' => '1',
+                'role' => 'SA',
             ],
             [
+                'role' => 'Admin',
                 'role_id' => '2',
                 'name' => 'Atif Khan',
                 'email' => 'atif.khan@gmail.com',
@@ -33,6 +35,7 @@ class AdminSeeder extends Seeder
                 'status' => '1',
             ],
             [
+                'role' => 'Moderator',
                 'role_id' => '3',
                 'name' => 'Muzzaffar Khan',
                 'email' => 'muzzaffar.khan@gmail.com',
@@ -53,7 +56,8 @@ class AdminSeeder extends Seeder
                     'password' => bcrypt($admin['password']),
                     'status' => $admin['status'],
                 ]);
-                $super_admin->assignRole($admin['role_id']);
+                $super_admin->assignRole($admin['role']);
+
             }
         }
     }
