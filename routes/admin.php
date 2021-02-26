@@ -19,6 +19,10 @@ Route::group([
     Route::get('/', 'AdminController@index')->name('dashboard');
     Route::get('home', 'AdminController@index')->name('dashboard');
     Route::get('dashboard', 'AdminController@index')->name('dashboard');
+    Route::group(['prefix' => 'users', 'as' => 'users.',], function () {
+        Route::get('', 'AdminUserController@index')->name('index');
+        Route::get('list', 'AdminUserController@index')->name('list');
+    });
 
     // for SA
     Route::group(['middleware' => ['role:SA']], function () {
@@ -28,9 +32,9 @@ Route::group([
     // for Admin
     Route::group(['middleware' => ['role:SA|Admin']], function () {
         // users
-        Route::group(['prefix' => 'users', 'as' => 'users.',], function () {
-            Route::get('all', 'AdminUserController@index')->name('index');
-        });
+//        Route::group(['prefix' => 'users', 'as' => 'users.',], function () {
+//            Route::get('all', 'AdminUserController@index')->name('index');
+//        });
     });
 
     // for Moderator

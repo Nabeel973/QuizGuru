@@ -1,7 +1,10 @@
 @extends('admin.layouts.app')
 
+@section('section')
+    <h2>Dashboard</h2>
+@endsection
+
 @section('content')
 
-    <p>Welcome to main page of {{ config('app.name') }} admin panel!</p>
 
 @endsection

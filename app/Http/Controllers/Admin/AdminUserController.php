@@ -18,10 +18,11 @@ class AdminUserController extends Controller
 
     public function index()
     {
-        $users = User::all();
+        return view('admin.pages.users.index');
+    }
+    public function users_list(){
+          $users = User::all();
+          dd($users);
 
-        return view('admin.pages.users.index', [
-            'users' => $users,
-        ]);
     }
 }

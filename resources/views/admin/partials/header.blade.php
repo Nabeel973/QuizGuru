@@ -3,9 +3,9 @@
     <a target="_blank" href="{{ route('front') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         {{-- //ss TODO: App Names like this, we can do using these methods https://stackoverflow.com/questions/6572974/regex-to-break-up-camelcase-string-php/6572999#6572999 --}}
-        <span class="logo-mini"><b>M</b>A</span>
+        <span class="logo-mini"><b>Q</b>G</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Multi</b> Auth</span>
+        <span class="logo-lg"><b>QuizGuru</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">

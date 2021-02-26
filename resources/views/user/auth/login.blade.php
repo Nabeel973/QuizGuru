@@ -3,20 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row my-lg-5 my-md-5">
-        <div class="col-md-8 text-center justify-content-center">
-            <div class="card my-lg-5 my-md-5 " style="background: transparent;">
+        <div class="col-md-8 mx-auto">
+            <div class="card my-lg-5 my-md-5" style="background: transparent;">
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group">
-                            <div class="col-6 offset-md-6 text-white">
-                              User Login
+                            <div class="col-6 offset-md-4 text-white text-center">
+                                <h2 class="font-weight-bold text-capitalize">User Login</h2>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-6 offset-md-6">
+                        <div class="form-group mt-2">
+                            <div class="col-md-6 offset-md-4">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Email">
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,9 +26,9 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-group mt-2">
 
-                            <div class="col-md-6 offset-md-6">
+                            <div class="col-md-6 offset-md-4">
                                 <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
@@ -39,7 +39,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>

@@ -2,7 +2,6 @@
 <html>
 <head>
     @include('admin.partials.head')
-    @yield('custom_styles')
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -17,14 +16,14 @@
 
     <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1>
-                Dashboard <small>{{ $nav }}</small>
-                @if($nav != 'dashboard' && $action != 'create' && $action != 'no_add')
-                    <a class="btn btn-success" href="{{ route('admin.' . $nav . '.create') }}">
-                        <i class="fa fa-plus"></i> Add
-                    </a>
-                @endif
-            </h1>
+{{--            <h1>--}}
+{{--                @if($nav != 'dashboard' && $action != 'create' && $action != 'no_add')--}}
+{{--                    <a class="btn btn-success" href="{{ route('admin.' . $nav . '.create') }}">--}}
+{{--                        <i class="fa fa-plus"></i> Add--}}
+{{--                    </a>--}}
+{{--                @endif--}}
+{{--            </h1>--}}
+            @yield('section')
         </section>
 
         <!-- Main content -->
